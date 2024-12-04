@@ -1,0 +1,42 @@
+Sign In
+Sign Up
+
+Dashboard
+
+Hi User 
+Balance
+
+Total SSH Account
+Total Trojan Account
+Total Vmess AccountTotal Vless Account
+
+Total Orders Per Month
+
+Server Vmess
+Rp. per Month
+Rp. Per Hours
+INDONESIA/Sign
+Status Availabel/No
+Stock
+
+Keranjang
+Create Account:
+Type
+Expired
+Total Price
+IDR
+Username
+Cuopon
+Create
+
+Show 
+Detail Server:
+Server Name
+Country
+ISP
+Bandwith
+Support STB
+
+Server Vless
+Server Trojan
+Server ShadowSock

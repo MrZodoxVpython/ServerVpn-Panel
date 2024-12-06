@@ -8,7 +8,8 @@ Balance
 
 Total SSH Account
 Total Trojan Account
-Total Vmess AccountTotal Vless Account
+Total Vmess Account
+Total Vless Account
 
 Total Orders Per Month
 

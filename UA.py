@@ -4,6 +4,18 @@ userCredential = {
 adminCredential = {
     "admin1": "password1"
 }
+dataServer = {
+    "Vmess": {
+        "15000": "INDONESIA"
+    },
+    "Trojan": {
+        "25000": "SINGAPURA"
+    },
+    "Vless": {
+        "10000": "INDONESIA"
+    }
+}
+balance = 1500000
 #MENU
 def loginMenu():
     print("Choose Login")
@@ -13,15 +25,16 @@ def loginMenu():
     if logindashboard == "2":
         userSignUp()
 
-#SERVER LIST
+# Menu User
 def menuUser():
-    print(f"Welcome to VPN PANEL! Your balance now is")
+    print(f"\nWelcome to VPN PANEL {loginUser()}! Your balance now is {balance}\n")
     # print(f"Total SSH Account: {totalSsh}")
     # print(f"Total Trojan Account: {totalTrojan}")
     # print(f"Total Vmess Account: {totalVmess}")
     # print(f"Total Vless Account: {totalVless}")
     print(f"Total orders per month")
 
+# SERVER
 def listServer():
     print("List Server SG!")
 
@@ -43,14 +56,15 @@ def loginUser():
     while True:
         print("\nUser Login") 
         username = input("Masukkan Username: ")
+        if username == "$admin":
+            adminLoginVerification()
         if username in userCredential:
             password = input("Masukkan password: ")
             length = len(userCredential[username])
-            if username and password == "$admin":
-                userLoginVerification()
-            elif password in userCredential[username] and len(password) == length:
+            if password in userCredential[username] and len(password) == length:
                 print("Login berhasil")
-                return True, username
+                menuUser()
+                return username
             else:
                 print("Password salah")
         else:
@@ -76,11 +90,13 @@ def loginAdmin():
             length = len(adminCredential[username])
             if password in adminCredential[username] and len(password) == length:
                 print("Login berhasil")
-                return True, username
+                menuAdmin()
+                return username
             else:
                 print("Password salah")
         else:
             print("Username tidak terdaftar")    
+
 # Menu admin 
 def menuAdmin(): 
     print("===ADMIN MENU===")
@@ -107,6 +123,7 @@ def menuAdmin():
             if pilihan == "3":
                 print(userCredential)
                 usr = input("Masukkan oke")
+                print(usr)
             if pilihan == "4":
                 userCredential
         if pilihan == "2":

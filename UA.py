@@ -64,7 +64,7 @@ def loginUser():
             if password in userCredential[username] and len(password) == length:
                 print("Login berhasil")
                 print("O")
-                return username
+                return True, username
             else:
                 print("Password salah")
         else:

@@ -15,6 +15,7 @@ dataServer = {
         "10000": "INDONESIA"
     }
 }
+
 balance = 1500000
 #MENU
 def loginMenu():
@@ -27,7 +28,7 @@ def loginMenu():
 
 # Menu User
 def menuUser():
-    print(f"\nWelcome to VPN PANEL {loginUser()}! Your balance now is {balance}\n")
+    print(f"\nWelcome to VPN PANEL{menuUser()}! Your balance now is {balance}\n")
     # print(f"Total SSH Account: {totalSsh}")
     # print(f"Total Trojan Account: {totalTrojan}")
     # print(f"Total Vmess Account: {totalVmess}")
@@ -58,17 +59,16 @@ def loginUser():
         username = input("Masukkan Username: ")
         if username == "$admin":
             adminLoginVerification()
-        if username in userCredential:
+        elif username in userCredential:
             password = input("Masukkan password: ")
             length = len(userCredential[username])
             if password in userCredential[username] and len(password) == length:
                 print("Login berhasil")
-                print("O")
-                return True, username
+                return username
             else:
                 print("Password salah")
         else:
-            print("Username tidak terdaftar")
+            print("Data salah!")
 
 # User daftar
 def userSignUp():
@@ -79,7 +79,7 @@ def userSignUp():
         print(userCredential)
     else:
         print("Username tidak tersedia")
-
+    
 # Login admin        
 def loginAdmin():
     while True:

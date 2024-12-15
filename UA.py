@@ -68,14 +68,14 @@ def loginUser():
             else:
                 print("Password salah")
         else:
-            print("Data salah!")
+            print("Akun salah!")
 
 # User daftar
 def userSignUp():
     username = input("Masukkan Username: ")
     if username not in userCredential:
         password = input("Masukkan Password: ") 
-        userCredential[username][password]
+        userCredential[username] == password
         print(userCredential)
     else:
         print("Username tidak tersedia")

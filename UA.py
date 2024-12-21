@@ -12,7 +12,7 @@ dataServer = {
         "25000": "SINGAPURA"
     },
     "Vless": {
-        "10000": "INDONESIA"
+        "10000": "SINGAPURA"
     }
 }
 
